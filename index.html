@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find recipes using the ingredients you already have.">
+    <title>Grill Seeker | Find recipes from your ingredients</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER: logo and main navigation -->
+    <header class="site-header">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <a href="index.html" class="logo">Grill Seeker</a>
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="cuisines.html">Cuisines</a></li>
+                <li><a href="dietary-guide.html">Dietary Guide</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO: heading and short explanation -->
+        <section class="hero">
+            <h1>What's in your kitchen?</h1>
+            <p>Find recipes with ingredients you already have.</p>
+        </section>
+
+        <!-- SEARCH: ingredient form -->
+        <section class="search">
+            <form id="ingredient-form" novalidate>
+                <label for="ingredient-input">Enter your ingredients</label>
+                <div class="input-row">
+                    <input type="text" id="ingredient-input" placeholder="e.g. spinach, rice">
+                    <button type="submit">Add</button>
+                </div>
+
+                <!-- Error message for empty or invalid input -->
+                <p id="ingredient-error" class="error-message" role="alert" hidden></p>
+
+                <!-- Ingredient tags will be added here by JavaScript -->
+                <ul id="ingredient-list" class="ingredient-list"></ul>
+
+                <button type="button" id="find-recipes">Find recipes</button>
+            </form>
+        </section>
+
+        <!-- FILTERS: category, cuisine and random recipe -->
+        <section class="filters">
+            <div>
+                <label for="category-filter">Category</label>
+                <select id="category-filter">
+                    <option value="">All categories</option>
+                </select>
+            </div>
+            <div>
+                <label for="cuisine-filter">Cuisine</label>
+                <select id="cuisine-filter">
+                    <option value="">All cuisines</option>
+                </select>
+            </div>
+            <button type="button" id="surprise-me">Surprise me</button>
+        </section>
+
+        <!-- RESULTS: recipe cards will be added here by JavaScript -->
+        <section class="results">
+            <h2>Recipe results</h2>
+            <p id="results-status" role="status"></p>
+            <div id="results-grid" class="results-grid"></div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Grill Seeker. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript, linked at the bottom of the body -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
