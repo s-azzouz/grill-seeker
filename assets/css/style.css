@@ -303,3 +303,19 @@ button {
 .site-footer p {
     margin: 0;
 }
+/* ==========================================================================
+   Tablet layout (768px and up)
+   ========================================================================== */
+@media (min-width: 768px) {
+
+    /* Category, Cuisine and Surprise me sit on one row */
+    .filters {
+        grid-template-columns: 1fr 1fr auto;
+        align-items: end;
+    }
+
+    /* Recipe cards in two columns */
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
