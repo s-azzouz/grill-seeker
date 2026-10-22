@@ -291,3 +291,15 @@ button {
 .recipe-card button {
     margin-top: auto;
 }
+/* ---------- Footer ---------- */
+.site-footer {
+    margin-top: var(--space-large);
+    padding: var(--space-medium);
+    border-top: 1px solid var(--colour-border);
+    color: var(--colour-text-light);
+    font-size: 0.875rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
