@@ -34,10 +34,24 @@ function renderIngredients() {
     // Clear the old tags first so nothing is shown twice
     ingredientList.innerHTML = "";
 
-    ingredients.forEach(function (ingredient) {
+    ingredients.forEach(function (ingredient, index) {
         const tag = document.createElement("li");
         tag.classList.add("ingredient-tag");
         tag.textContent = ingredient;
+
+        // Remove button for this tag
+        const removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.textContent = "\u00d7";
+        removeButton.setAttribute("aria-label", "Remove " + ingredient);
+
+        // Remove this ingredient when its button is clicked
+        removeButton.addEventListener("click", function () {
+            ingredients.splice(index, 1);
+            renderIngredients();
+        });
+
+        tag.appendChild(removeButton);
         ingredientList.appendChild(tag);
     });
 }
