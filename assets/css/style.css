@@ -235,3 +235,24 @@ button {
     margin: 0 auto;
     padding: 0 var(--space-medium) var(--space-medium);
 }
+/* ---------- Results ---------- */
+.results {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-medium);
+}
+
+.results h2 {
+    margin: 0 0 var(--space-small);
+}
+
+#results-status {
+    margin: 0 0 var(--space-medium);
+    color: var(--colour-text-light);
+}
+
+/* One column on small screens; more columns are added in media queries */
+.results-grid {
+    display: grid;
+    gap: var(--space-medium);
+}
