@@ -58,6 +58,14 @@ select:focus-visible {
     text-decoration: none;
 }
 
+/* Logo image size */
+.logo img {
+    display: block;
+    height: 80px;
+    width: auto;
+    margin: 0 auto;
+}
+
 .main-nav ul {
     display: flex;
     flex-wrap: wrap;
