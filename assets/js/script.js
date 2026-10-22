@@ -6,6 +6,7 @@
 const ingredientForm = document.getElementById("ingredient-form");
 const ingredientInput = document.getElementById("ingredient-input");
 const ingredientError = document.getElementById("ingredient-error");
+const ingredientList = document.getElementById("ingredient-list");
 
 
 // ---------- Stored data ----------
@@ -25,6 +26,20 @@ function showError(message) {
 function clearError() {
     ingredientError.textContent = "";
     ingredientError.hidden = true;
+}
+// ---------- Showing the ingredient tags ----------
+
+// Draws one tag for every ingredient in the list
+function renderIngredients() {
+    // Clear the old tags first so nothing is shown twice
+    ingredientList.innerHTML = "";
+
+    ingredients.forEach(function (ingredient) {
+        const tag = document.createElement("li");
+        tag.classList.add("ingredient-tag");
+        tag.textContent = ingredient;
+        ingredientList.appendChild(tag);
+    });
 }
 
 // ---------- Adding an ingredient ----------
