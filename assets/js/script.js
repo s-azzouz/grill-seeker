@@ -42,3 +42,11 @@ ingredientForm.addEventListener("submit", function (event) {
     // Temporary: we will replace this with real tags later
     console.log("Ingredient entered:", ingredient);
 });
+    clearError();
+
+    // Temporary: we will replace this with real tags later
+    console.log("Ingredient entered:", ingredient);
+
+    // Clear the box ready for the next ingredient
+    ingredientInput.value = "";
+});
