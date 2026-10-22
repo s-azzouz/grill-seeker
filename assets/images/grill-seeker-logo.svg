@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Grill Seeker logo</title>
+  <desc id="desc">A minimal forest-green kettle grill with burnt-orange flames above the Grill Seeker wordmark.</desc>
+  <g transform="translate(0 2)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Flames -->
+    <path d="M285 83 C269 65 291 53 289 35 C310 51 317 65 308 82 Z" fill="#C7471E"/>
+    <path d="M319 78 C302 56 329 42 327 20 C352 45 354 62 340 80 Z" fill="#C7471E"/>
+    <path d="M351 83 C340 67 360 57 359 43 C376 57 380 70 369 84 Z" fill="#C7471E"/>
+    <!-- Grill lid / bowl -->
+    <path d="M244 106 C248 76 275 59 320 59 C365 59 392 76 396 106 Z" fill="#183B2B"/>
+    <path d="M254 105 H386" fill="none" stroke="#FFF8ED" stroke-width="5"/>
+    <path d="M242 111 Q320 127 398 111 L389 151 Q320 175 251 151 Z" fill="#183B2B"/>
+    <!-- Cooking grate -->
+    <path d="M260 119 Q320 131 380 119 M263 131 Q320 143 377 131 M268 143 Q320 155 372 143" fill="none" stroke="#FFF8ED" stroke-width="4"/>
+    <!-- Handles -->
+    <path d="M244 119 H224 M396 119 H416" fill="none" stroke="#183B2B" stroke-width="9"/>
+    <!-- Legs and lower shelf -->
+    <path d="M273 158 L253 206 M367 158 L387 206" fill="none" stroke="#183B2B" stroke-width="12"/>
+    <path d="M278 184 H362" fill="none" stroke="#183B2B" stroke-width="7"/>
+    <path d="M253 206 H387" fill="none" stroke="#183B2B" stroke-width="8"/>
+    <!-- Wheels -->
+    <circle cx="253" cy="211" r="8" fill="#183B2B"/>
+    <circle cx="387" cy="211" r="8" fill="#183B2B"/>
+  </g>
+  <text x="320" y="292" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="53" font-weight="800" letter-spacing="-2">
+    <tspan fill="#183B2B">Grill</tspan><tspan fill="#C7471E"> Seeker</tspan>
+  </text>
+</svg>
