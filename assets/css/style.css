@@ -198,7 +198,7 @@ button {
     line-height: 1;
     color: var(--colour-text);
 }
-//* ---------- Ingredient tags (added by JavaScript) ---------- */
+/* ---------- Ingredient tags (added by JavaScript) ---------- */
 .ingredient-list {
     display: flex;
     flex-wrap: wrap;
