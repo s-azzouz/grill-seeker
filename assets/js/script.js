@@ -7,6 +7,12 @@ const ingredientForm = document.getElementById("ingredient-form");
 const ingredientInput = document.getElementById("ingredient-input");
 const ingredientError = document.getElementById("ingredient-error");
 
+
+// ---------- Stored data ----------
+
+// The ingredients the user has added so far
+let ingredients = [];
+
 // ---------- Error message helpers ----------
 
 // Shows a message under the ingredient box
@@ -39,9 +45,10 @@ ingredientForm.addEventListener("submit", function (event) {
 
     clearError();
 
-    // Temporary: we will replace this with real tags later
-    console.log("Ingredient entered:", ingredient);
-    
+    // Save the ingredient to the list
+    ingredients.push(ingredient);
+    console.log("Ingredients so far:", ingredients);
+
     // Clear the box ready for the next ingredient
     ingredientInput.value = "";
 });
