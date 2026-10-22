@@ -198,3 +198,40 @@ button {
     line-height: 1;
     color: var(--colour-text);
 }
+//* ---------- Ingredient tags (added by JavaScript) ---------- */
+.ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-small);
+    margin: var(--space-medium) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ingredient-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-small);
+    padding: 0.25rem 0.5rem;
+    background-color: var(--colour-background);
+    border: 1px solid var(--colour-border);
+    border-radius: var(--radius);
+}
+
+/* Small remove (x) button inside each tag */
+.ingredient-tag button {
+    padding: 0 0.4rem;
+    border: none;
+    background: none;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--colour-text);
+}
+/* ---------- Filters ---------- */
+.filters {
+    display: grid;
+    gap: var(--space-medium);
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 var(--space-medium) var(--space-medium);
+}
