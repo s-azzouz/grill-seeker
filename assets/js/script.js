@@ -62,6 +62,29 @@ function renderIngredients() {
     });
 }
 
+// ---------- Getting recipes from the API ----------
+
+// Asks the API for recipes that use the given ingredients
+async function fetchRecipes(ingredientNames) {
+    // Join the ingredients into one comma-separated list for the web address
+    const ingredientText = ingredientNames.map(encodeURIComponent).join(",");
+
+    const url = API_BASE_URL + "/recipes/findByIngredients"
+        + "?ingredients=" + ingredientText
+        + "&number=6"
+        + "&ranking=1"
+        + "&apiKey=" + API_KEY;
+
+    const response = await fetch(url);
+
+    // Stop if the API answered with an error status
+    if (!response.ok) {
+        throw new Error("The recipe service returned status " + response.status);
+    }
+
+    return await response.json();
+}
+
 // ---------- Adding an ingredient ----------
 
 // Runs when the user clicks Add or presses Enter
