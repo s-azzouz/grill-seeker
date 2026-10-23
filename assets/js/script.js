@@ -8,7 +8,6 @@ const ingredientInput = document.getElementById("ingredient-input");
 const ingredientError = document.getElementById("ingredient-error");
 const ingredientList = document.getElementById("ingredient-list");
 
-
 // ---------- Stored data ----------
 
 // The ingredients the user has added so far
@@ -27,6 +26,7 @@ function clearError() {
     ingredientError.textContent = "";
     ingredientError.hidden = true;
 }
+
 // ---------- Showing the ingredient tags ----------
 
 // Draws one tag for every ingredient in the list
@@ -72,7 +72,7 @@ ingredientForm.addEventListener("submit", function (event) {
         return;
     }
 
-        // Duplicate check: do not add the same ingredient twice (ignoring capital letters)
+    // Duplicate check: do not add the same ingredient twice (ignoring capital letters)
     const alreadyAdded = ingredients.some(function (item) {
         return item.toLowerCase() === ingredient.toLowerCase();
     });
