@@ -9,6 +9,7 @@ const ingredientError = document.getElementById("ingredient-error");
 const ingredientList = document.getElementById("ingredient-list");
 const resultsGrid = document.getElementById("results-grid");
 const resultsStatus = document.getElementById("results-status");
+const findRecipesButton = document.getElementById("find-recipes");
 
 // ---------- API settings ----------
 
@@ -169,4 +170,20 @@ ingredientForm.addEventListener("submit", function (event) {
 
     // Clear the box ready for the next ingredient
     ingredientInput.value = "";
+});
+
+// ---------- Searching for recipes ----------
+
+// Runs when the user clicks Find recipes
+findRecipesButton.addEventListener("click", async function () {
+    // Need at least one ingredient to search with
+    if (ingredients.length === 0) {
+        showError("Add at least one ingredient first.");
+        return;
+    }
+
+    clearError();
+
+    const recipes = await fetchRecipes(ingredients);
+    renderRecipes(recipes);
 });
