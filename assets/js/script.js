@@ -8,6 +8,12 @@ const ingredientInput = document.getElementById("ingredient-input");
 const ingredientError = document.getElementById("ingredient-error");
 const ingredientList = document.getElementById("ingredient-list");
 
+// ---------- API settings ----------
+
+// Spoonacular recipe API
+const API_BASE_URL = "https://api.spoonacular.com";
+const API_KEY = "84e8e2a8e7bf41099390064ed46c95fa";
+
 // ---------- Stored data ----------
 
 // The ingredients the user has added so far
