@@ -72,6 +72,14 @@ ingredientForm.addEventListener("submit", function (event) {
         return;
     }
 
+        // Format check: letters, spaces, hyphens and apostrophes only
+    const validFormat = /^[\p{L}][\p{L}\s'-]*$/u;
+
+    if (!validFormat.test(ingredient)) {
+        showError("Please use letters only, for example: spinach.");
+        return;
+    }
+
     // Duplicate check: do not add the same ingredient twice (ignoring capital letters)
     const alreadyAdded = ingredients.some(function (item) {
         return item.toLowerCase() === ingredient.toLowerCase();
