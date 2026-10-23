@@ -86,7 +86,7 @@ ingredientForm.addEventListener("submit", function (event) {
 
     // Save the ingredient to the list
     ingredients.push(ingredient);
-    console.log("Ingredients so far:", ingredients);
+    renderIngredients();
 
     // Clear the box ready for the next ingredient
     ingredientInput.value = "";
