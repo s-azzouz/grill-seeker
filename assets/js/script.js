@@ -184,6 +184,10 @@ findRecipesButton.addEventListener("click", async function () {
 
     clearError();
 
+    resultsStatus.textContent = "Finding recipes…";
+
     const recipes = await fetchRecipes(ingredients);
     renderRecipes(recipes);
+
+    resultsStatus.textContent = "";
 });
