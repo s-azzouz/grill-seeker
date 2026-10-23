@@ -72,6 +72,16 @@ ingredientForm.addEventListener("submit", function (event) {
         return;
     }
 
+        // Duplicate check: do not add the same ingredient twice (ignoring capital letters)
+    const alreadyAdded = ingredients.some(function (item) {
+        return item.toLowerCase() === ingredient.toLowerCase();
+    });
+
+    if (alreadyAdded) {
+        showError(ingredient + " is already in your list.");
+        return;
+    }
+
     clearError();
 
     // Save the ingredient to the list
