@@ -7,6 +7,8 @@ const ingredientForm = document.getElementById("ingredient-form");
 const ingredientInput = document.getElementById("ingredient-input");
 const ingredientError = document.getElementById("ingredient-error");
 const ingredientList = document.getElementById("ingredient-list");
+const resultsGrid = document.getElementById("results-grid");
+const resultsStatus = document.getElementById("results-status");
 
 // ---------- API settings ----------
 
@@ -83,6 +85,40 @@ async function fetchRecipes(ingredientNames) {
     }
 
     return await response.json();
+}
+
+// ---------- Showing the recipe cards ----------
+
+// Draws one card for every recipe the API returned
+function renderRecipes(recipes) {
+    // Clear any old cards first
+    resultsGrid.innerHTML = "";
+
+    recipes.forEach(function (recipe) {
+        const card = document.createElement("article");
+        card.classList.add("recipe-card");
+
+        const image = document.createElement("img");
+        image.src = recipe.image;
+        image.alt = recipe.title;
+
+        const body = document.createElement("div");
+        body.classList.add("recipe-card-body");
+
+        const title = document.createElement("h3");
+        title.textContent = recipe.title;
+
+        const summary = document.createElement("p");
+        summary.textContent = "Uses " + recipe.usedIngredientCount
+            + " of your ingredients, "
+            + recipe.missedIngredientCount + " more needed";
+
+        body.appendChild(title);
+        body.appendChild(summary);
+        card.appendChild(image);
+        card.appendChild(body);
+        resultsGrid.appendChild(card);
+    });
 }
 
 // ---------- Adding an ingredient ----------
