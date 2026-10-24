@@ -184,10 +184,19 @@ findRecipesButton.addEventListener("click", async function () {
 
     clearError();
 
+    // Tell the user something is happening
     resultsStatus.textContent = "Finding recipes…";
 
-    const recipes = await fetchRecipes(ingredients);
-    renderRecipes(recipes);
+    try {
+        const recipes = await fetchRecipes(ingredients);
+        renderRecipes(recipes);
 
-    resultsStatus.textContent = "";
+        // Clear the message once the cards are showing
+        resultsStatus.textContent = "";
+    } catch (error) {
+        // Remove any old cards and tell the user what went wrong
+        resultsGrid.innerHTML = "";
+        resultsStatus.textContent = "Something went wrong, please try again.";
+        console.error("Recipe search failed:", error);
+    }
 });
