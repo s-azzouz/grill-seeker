@@ -189,6 +189,12 @@ findRecipesButton.addEventListener("click", async function () {
 
     try {
         const recipes = await fetchRecipes(ingredients);
+        // No matches: clear the old cards and say so
+        if (recipes.length === 0) {
+            resultsGrid.innerHTML = "";
+            resultsStatus.textContent = "No recipes found, try different ingredients.";
+            return;
+        }
         renderRecipes(recipes);
 
         // Clear the message once the cards are showing
