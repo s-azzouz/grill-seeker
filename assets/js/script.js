@@ -72,10 +72,11 @@ async function fetchRecipes(ingredientNames) {
     // Join the ingredients into one comma-separated list for the web address
     const ingredientText = ingredientNames.map(encodeURIComponent).join(",");
 
-    const url = API_BASE_URL + "/recipes/findByIngredients"
-        + "?ingredients=" + ingredientText
+    const url = API_BASE_URL + "/recipes/complexSearch"
+        + "?includeIngredients=" + ingredientText
+        + "&fillIngredients=true"
+        + "&sort=min-missing-ingredients"
         + "&number=6"
-        + "&ranking=1"
         + "&apiKey=" + API_KEY;
 
     const response = await fetch(url);
@@ -85,7 +86,10 @@ async function fetchRecipes(ingredientNames) {
         throw new Error("The recipe service returned status " + response.status);
     }
 
-    return await response.json();
+    const data = await response.json();
+
+    // This endpoint wraps the recipes in a "results" list
+    return data.results;
 }
 
 // ---------- Showing the recipe cards ----------
