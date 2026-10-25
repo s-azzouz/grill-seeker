@@ -10,6 +10,8 @@ const ingredientList = document.getElementById("ingredient-list");
 const resultsGrid = document.getElementById("results-grid");
 const resultsStatus = document.getElementById("results-status");
 const findRecipesButton = document.getElementById("find-recipes");
+const categoryFilter = document.getElementById("category-filter");
+const cuisineFilter = document.getElementById("cuisine-filter");
 
 // ---------- API settings ----------
 
@@ -200,7 +202,11 @@ findRecipesButton.addEventListener("click", async function () {
     resultsStatus.textContent = "Finding recipes…";
 
     try {
-        const recipes = await fetchRecipes(ingredients);
+                const recipes = await fetchRecipes(
+            ingredients,
+            cuisineFilter.value,
+            categoryFilter.value
+        );
         // No matches: clear the old cards and say so
         if (recipes.length === 0) {
             resultsGrid.innerHTML = "";
