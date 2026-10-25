@@ -138,13 +138,13 @@ ingredientForm.addEventListener("submit", function (event) {
         return;
     }
 
-        // Length check: keep entries to a sensible size
+    // Length check: keep entries to a sensible size
     if (ingredient.length > 30) {
         showError("Please keep ingredient names under 30 characters.");
         return;
     }
 
-        // Format check: letters, spaces, hyphens and apostrophes only
+    // Format check: letters, spaces, hyphens and apostrophes only
     const validFormat = /^[\p{L}][\p{L}\s'-]*$/u;
 
     if (!validFormat.test(ingredient)) {
