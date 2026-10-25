@@ -79,6 +79,14 @@ async function fetchRecipes(ingredientNames) {
         + "&number=6"
         + "&apiKey=" + API_KEY;
 
+// Only add the filters if the user chose one
+    if (cuisine) {
+        url += "&cuisine=" + encodeURIComponent(cuisine);
+    }
+    if (category) {
+        url += "&type=" + encodeURIComponent(category);
+    }
+
     const response = await fetch(url);
 
     // Stop if the API answered with an error status
