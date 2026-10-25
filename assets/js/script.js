@@ -110,9 +110,9 @@ function renderRecipes(recipes) {
         title.textContent = recipe.title;
 
         const summary = document.createElement("p");
-        summary.textContent = "Uses " + recipe.usedIngredientCount
+                summary.textContent = "Uses " + recipe.usedIngredients.length
             + " of your ingredients, "
-            + recipe.missedIngredientCount + " more needed";
+            + recipe.missedIngredients.length + " more needed";
 
         body.appendChild(title);
         body.appendChild(summary);
