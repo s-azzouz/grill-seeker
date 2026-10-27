@@ -70,11 +70,11 @@ function renderIngredients() {
 // ---------- Getting recipes from the API ----------
 
 // Asks the API for recipes that use the given ingredients
-async function fetchRecipes(ingredientNames) {
+async function fetchRecipes(ingredientNames, cuisine, category) {
     // Join the ingredients into one comma-separated list for the web address
     const ingredientText = ingredientNames.map(encodeURIComponent).join(",");
 
-    const url = API_BASE_URL + "/recipes/complexSearch"
+        let url = API_BASE_URL + "/recipes/complexSearch"
         + "?includeIngredients=" + ingredientText
         + "&fillIngredients=true"
         + "&sort=min-missing-ingredients"
