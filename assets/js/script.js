@@ -81,7 +81,7 @@ async function fetchRecipes(ingredientNames, cuisine, category) {
         + "&number=6"
         + "&apiKey=" + API_KEY;
 
-// Only add the filters if the user chose one
+    // Only add the filters if the user chose one
     if (cuisine) {
         url += "&cuisine=" + encodeURIComponent(cuisine);
     }
@@ -213,8 +213,8 @@ ingredientForm.addEventListener("submit", function (event) {
 
 // ---------- Searching for recipes ----------
 
-// Runs when the user clicks Find recipes
-findRecipesButton.addEventListener("click", async function () {
+    // Runs when the user clicks Find recipes
+    findRecipesButton.addEventListener("click", async function () {
     // Need at least one ingredient to search with
     if (ingredients.length === 0) {
         showError("Add at least one ingredient first.");
