@@ -333,6 +333,14 @@ button {
    ========================================================================== */
 @media (min-width: 768px) {
 
+        /* Full navigation is always shown; the Menu button is not needed */
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+    }
     /* Category, Cuisine and Surprise me sit on one row */
     .filters {
         grid-template-columns: 1fr 1fr auto;
