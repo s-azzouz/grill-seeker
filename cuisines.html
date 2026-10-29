@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore cooking styles from around the world.">
+    <title>Cuisines | Grill Seeker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER: logo and main navigation -->
+    <header class="site-header">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <a href="index.html" class="logo">
+            <img src="assets/images/grill-seeker-logo.svg" alt="Grill Seeker - go to homepage">
+        </a>
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cuisines.html" aria-current="page">Cuisines</a></li>
+                <li><a href="dietary-guide.html">Dietary Guide</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO: heading and short explanation -->
+        <section class="hero">
+            <h1>Explore cuisines</h1>
+            <p>Discover cooking styles from around the world.</p>
+        </section>
+
+        <!-- CUISINES: cards will be added here -->
+        <section class="cuisines">
+            <div id="cuisine-grid" class="cuisine-grid"></div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Grill Seeker. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript, linked at the bottom of the body -->
+    <script src="assets/js/menu.js"></script>
+
+</body>
+</html>
