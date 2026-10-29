@@ -91,9 +91,24 @@ select:focus-visible {
     font-weight: bold;
 }
 
-/* Menu button is hidden until the JavaScript for it is written */
+/* ---------- Mobile menu (collapsed until the Menu button is used) ---------- */
+.site-header {
+    position: relative;
+}
+
 .menu-toggle {
+    position: absolute;
+    top: var(--space-medium);
+    left: var(--space-medium);
+    padding: 0.5rem 0.75rem;
+}
+
+.main-nav {
     display: none;
+}
+
+.main-nav.is-open {
+    display: block;
 }
 
 /* ---------- Hero ---------- */
