@@ -12,6 +12,7 @@ const resultsStatus = document.getElementById("results-status");
 const findRecipesButton = document.getElementById("find-recipes");
 const categoryFilter = document.getElementById("category-filter");
 const cuisineFilter = document.getElementById("cuisine-filter");
+const surpriseButton = document.getElementById("surprise-me");
 
 // ---------- API settings ----------
 
@@ -247,5 +248,28 @@ ingredientForm.addEventListener("submit", function (event) {
         resultsGrid.innerHTML = "";
         resultsStatus.textContent = "Something went wrong, please try again.";
         console.error("Recipe search failed:", error);
+    }
+});
+
+// ---------- Surprise me ----------
+
+// Runs when the user clicks Surprise me: shows one random recipe
+surpriseButton.addEventListener("click", async function () {
+    clearError();
+
+    // Tell the user something is happening
+    resultsStatus.textContent = "Finding a surprise recipe…";
+
+    try {
+        const recipes = await fetchRandomRecipe();
+        renderRecipes(recipes);
+
+        // Clear the message once the card is showing
+        resultsStatus.textContent = "";
+    } catch (error) {
+        // Remove any old cards and tell the user what went wrong
+        resultsGrid.innerHTML = "";
+        resultsStatus.textContent = "Something went wrong, please try again.";
+        console.error("Random recipe failed:", error);
     }
 });
