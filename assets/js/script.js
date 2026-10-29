@@ -102,6 +102,25 @@ async function fetchRecipes(ingredientNames, cuisine, category) {
     return data.results;
 }
 
+// Asks the API for one random recipe
+async function fetchRandomRecipe() {
+    const url = API_BASE_URL + "/recipes/random"
+        + "?number=1"
+        + "&apiKey=" + API_KEY;
+
+    const response = await fetch(url);
+
+    // Stop if the API answered with an error status
+    if (!response.ok) {
+        throw new Error("The recipe service returned status " + response.status);
+    }
+
+    const data = await response.json();
+
+    // This endpoint wraps the recipes in a "recipes" list
+    return data.recipes;
+}
+
 // ---------- Showing the recipe cards ----------
 
 // Draws one card for every recipe the API returned
@@ -123,10 +142,16 @@ function renderRecipes(recipes) {
         const title = document.createElement("h3");
         title.textContent = recipe.title;
 
-        const summary = document.createElement("p");
-                summary.textContent = "Uses " + recipe.usedIngredients.length
-            + " of your ingredients, "
-            + recipe.missedIngredients.length + " more needed";
+                const summary = document.createElement("p");
+
+        // Search results list used and missing ingredients; random recipes do not
+        if (recipe.usedIngredients && recipe.missedIngredients) {
+            summary.textContent = "Uses " + recipe.usedIngredients.length
+                + " of your ingredients, "
+                + recipe.missedIngredients.length + " more needed";
+        } else if (recipe.readyInMinutes) {
+            summary.textContent = "Ready in " + recipe.readyInMinutes + " minutes";
+        }
 
         body.appendChild(title);
         body.appendChild(summary);
