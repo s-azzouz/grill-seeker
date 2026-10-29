@@ -75,7 +75,7 @@ async function fetchRecipes(ingredientNames, cuisine, category) {
     // Join the ingredients into one comma-separated list for the web address
     const ingredientText = ingredientNames.map(encodeURIComponent).join(",");
 
-        let url = API_BASE_URL + "/recipes/complexSearch"
+    let url = API_BASE_URL + "/recipes/complexSearch"
         + "?includeIngredients=" + ingredientText
         + "&fillIngredients=true"
         + "&sort=min-missing-ingredients"
@@ -143,7 +143,7 @@ function renderRecipes(recipes) {
         const title = document.createElement("h3");
         title.textContent = recipe.title;
 
-                const summary = document.createElement("p");
+        const summary = document.createElement("p");
 
         // Search results list used and missing ingredients; random recipes do not
         if (recipe.usedIngredients && recipe.missedIngredients) {
@@ -154,8 +154,25 @@ function renderRecipes(recipes) {
             summary.textContent = "Ready in " + recipe.readyInMinutes + " minutes";
         }
 
+        // Link to the full recipe on Spoonacular, built from the title and ID
+        const titleSlug = recipe.title
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "");
+
+        const link = document.createElement("a");
+        link.href = "https://spoonacular.com/recipes/" + titleSlug + "-" + recipe.id;
+        link.textContent = "View recipe";
+        link.classList.add("recipe-link");
+
+        // External links open in a new tab, as the criteria require
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.setAttribute("aria-label", "View recipe for " + recipe.title + " (opens in a new tab)");
+
         body.appendChild(title);
         body.appendChild(summary);
+        body.appendChild(link);
         card.appendChild(image);
         card.appendChild(body);
         resultsGrid.appendChild(card);
@@ -214,8 +231,8 @@ ingredientForm.addEventListener("submit", function (event) {
 
 // ---------- Searching for recipes ----------
 
-    // Runs when the user clicks Find recipes
-    findRecipesButton.addEventListener("click", async function () {
+// Runs when the user clicks Find recipes
+findRecipesButton.addEventListener("click", async function () {
     // Need at least one ingredient to search with
     if (ingredients.length === 0) {
         showError("Add at least one ingredient first.");
@@ -228,17 +245,19 @@ ingredientForm.addEventListener("submit", function (event) {
     resultsStatus.textContent = "Finding recipes…";
 
     try {
-                const recipes = await fetchRecipes(
+        const recipes = await fetchRecipes(
             ingredients,
             cuisineFilter.value,
             categoryFilter.value
         );
+
         // No matches: clear the old cards and say so
         if (recipes.length === 0) {
             resultsGrid.innerHTML = "";
             resultsStatus.textContent = "No recipes found, try different ingredients.";
             return;
         }
+
         renderRecipes(recipes);
 
         // Clear the message once the cards are showing
