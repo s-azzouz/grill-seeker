@@ -377,3 +377,16 @@ button {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* ---------- Cuisines page ---------- */
+.cuisines {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-medium);
+}
+
+/* One column on small screens; more columns are added in media queries */
+.cuisine-grid {
+    display: grid;
+    gap: var(--space-medium);
+}
