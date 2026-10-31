@@ -390,3 +390,31 @@ button {
     display: grid;
     gap: var(--space-medium);
 }
+
+/* ---------- Cuisine cards (created by JavaScript) ---------- */
+.cuisine-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colour-background);
+    border: 1px solid var(--colour-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.cuisine-card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--space-small);
+    padding: var(--space-medium);
+}
+
+.cuisine-card h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.cuisine-card p {
+    margin: 0;
+    color: var(--colour-text-light);
+}
