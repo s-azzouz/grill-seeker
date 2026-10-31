@@ -343,12 +343,13 @@ button {
 .site-footer p {
     margin: 0;
 }
+
 /* ==========================================================================
    Tablet layout (768px and up)
    ========================================================================== */
 @media (min-width: 768px) {
 
-        /* Full navigation is always shown; the Menu button is not needed */
+    /* Full navigation is always shown; the Menu button is not needed */
     .menu-toggle {
         display: none;
     }
@@ -356,6 +357,7 @@ button {
     .main-nav {
         display: block;
     }
+
     /* Category, Cuisine and Surprise me sit on one row */
     .filters {
         grid-template-columns: 1fr 1fr auto;
@@ -364,6 +366,11 @@ button {
 
     /* Recipe cards in two columns */
     .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Cuisine cards in two columns */
+    .cuisine-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
