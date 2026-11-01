@@ -9,6 +9,7 @@ const dialogTitle = document.getElementById("dialog-title");
 const dialogOverview = document.getElementById("dialog-overview");
 const dialogDishes = document.getElementById("dialog-dishes");
 const dialogRecipesLink = document.getElementById("dialog-recipes-link");
+const dialogClose = document.getElementById("dialog-close");
 
 // ---------- Showing the cuisine cards ----------
 
@@ -67,6 +68,11 @@ function openCuisineDialog(cuisine) {
 
     cuisineDialog.showModal();
 }
+
+// Closes the dialog when the × button is clicked
+dialogClose.addEventListener("click", function () {
+    cuisineDialog.close();
+});
 
 // ---------- Start ----------
 renderCuisines();
