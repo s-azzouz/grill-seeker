@@ -430,3 +430,60 @@ button {
     margin: 0;
     color: var(--colour-text-light);
 }
+
+/* ---------- Cuisine detail dialog ---------- */
+.cuisine-dialog {
+    width: min(90%, 480px);
+    padding: var(--space-large) var(--space-medium) var(--space-medium);
+    color: var(--colour-text);
+    background-color: var(--colour-background);
+    border: 1px solid var(--colour-border);
+    border-radius: var(--radius);
+}
+
+/* Dims the page behind the dialog */
+.cuisine-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cuisine-dialog h2 {
+    margin: 0 0 var(--space-small);
+}
+
+.cuisine-dialog h3 {
+    margin: var(--space-medium) 0 var(--space-small);
+    font-size: 1.125rem;
+}
+
+.cuisine-dialog ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+/* Close button in the top right corner */
+.dialog-close {
+    position: absolute;
+    top: var(--space-small);
+    right: var(--space-small);
+    padding: 0.25rem 0.75rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--colour-text);
+    background: none;
+    border: none;
+}
+
+/* "See recipes" link styled like a button */
+.dialog-link {
+    display: inline-block;
+    margin-top: var(--space-medium);
+    padding: 0.75rem 1.25rem;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: var(--colour-accent);
+    border-radius: var(--radius);
+}
+
+.dialog-link:hover {
+    background-color: var(--colour-accent-dark);
+}
