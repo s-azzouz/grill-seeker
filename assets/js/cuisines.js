@@ -32,6 +32,16 @@ function renderCuisines() {
 
         body.appendChild(name);
         body.appendChild(description);
+
+        // Button that opens the detail view for this cuisine
+        const learnMoreButton = document.createElement("button");
+        learnMoreButton.type = "button";
+        learnMoreButton.textContent = "Learn more";
+        learnMoreButton.setAttribute("aria-label", "Learn more about " + cuisine.name + " cuisine");
+        learnMoreButton.addEventListener("click", function () {
+            openCuisineDialog(cuisine);
+        });
+        body.appendChild(learnMoreButton);
         card.appendChild(body);
         cuisineGrid.appendChild(card);
     });
