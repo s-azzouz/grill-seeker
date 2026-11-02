@@ -292,3 +292,28 @@ surpriseButton.addEventListener("click", async function () {
         console.error("Random recipe failed:", error);
     }
 });
+
+
+// ---------- Cuisine chosen on the Cuisines page ----------
+
+// Reads ?cuisine=italian from the web address and selects it in the filter
+function applyCuisineFromAddress() {
+    const params = new URLSearchParams(window.location.search);
+    const chosenCuisine = params.get("cuisine");
+
+    // Nothing in the address: leave the filter alone
+    if (!chosenCuisine) {
+        return;
+    }
+
+    // Only accept values that exist in the dropdown
+    const matchingOption = Array.from(cuisineFilter.options).find(function (option) {
+        return option.value === chosenCuisine;
+    });
+
+    if (matchingOption) {
+        cuisineFilter.value = chosenCuisine;
+    }
+}
+
+applyCuisineFromAddress();
