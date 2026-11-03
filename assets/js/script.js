@@ -311,8 +311,12 @@ function applyCuisineFromAddress() {
         return option.value === chosenCuisine;
     });
 
-    if (matchingOption) {
+        if (matchingOption) {
         cuisineFilter.value = chosenCuisine;
+
+        // Tell the user why a cuisine is already chosen and what to do next
+        resultsStatus.textContent = matchingOption.textContent
+            + " cuisine selected. Add your ingredients, then choose Find recipes.";
     }
 }
 
