@@ -368,6 +368,11 @@ button {
     color: var(--colour-text-light);
 }
 
+/* Pushes the Learn more button to the bottom so all cards line up */
+.cuisine-card button {
+    margin-top: auto;
+}
+
 /* ---------- Cuisine detail dialog ---------- */
 .cuisine-dialog {
     width: min(90%, 480px);
