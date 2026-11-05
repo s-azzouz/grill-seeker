@@ -416,7 +416,8 @@ button {
 }
 
 /* "See recipes" link styled like a button */
-.dialog-link {
+.dialog-link,
+.home-link {
     display: inline-block;
     margin-top: var(--space-medium);
     padding: 0.75rem 1.25rem;
@@ -426,7 +427,8 @@ button {
     border-radius: var(--radius);
 }
 
-.dialog-link:hover {
+.dialog-link:hover 
+.home-link:hover {
     background-color: var(--colour-accent-dark);
 }
 
