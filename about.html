@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Why Grill Seeker exists, who it is for and how it works.">
+    <title>About | Grill Seeker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER: logo and main navigation -->
+    <header class="site-header">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <a href="index.html" class="logo">
+            <img src="assets/images/grill-seeker-logo.svg" alt="Grill Seeker - go to homepage">
+        </a>
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cuisines.html">Cuisines</a></li>
+                <li><a href="dietary-guide.html">Dietary Guide</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO: heading and short explanation -->
+        <section class="hero">
+            <h1>About Grill Seeker</h1>
+            <p>Helping you decide what to cook with what you already have.</p>
+        </section>
+
+        <!-- ABOUT: purpose, audience and how the site works -->
+        <section class="about">
+
+            <h2>Why it exists</h2>
+            <p>Deciding what to cook is harder than cooking it. Grill Seeker takes the ingredients already in your kitchen and finds recipes that use them, so you spend less time scrolling and more time eating.</p>
+
+            <h2>Who it is for</h2>
+            <ul>
+                <li>People who can't decide what to make tonight.</li>
+                <li>Anyone looking for new recipe ideas.</li>
+                <li>Parents cooking for their families who want variety.</li>
+            </ul>
+
+            <h2>How it works</h2>
+            <ol>
+                <li>Add the ingredients you have, one at a time.</li>
+                <li>Optionally pick a cuisine or a category.</li>
+                <li>Choose Find recipes, or Surprise me for a random idea.</li>
+            </ol>
+            <p>You can also explore the <a href="cuisines.html">cuisines</a> and the <a href="dietary-guide.html">dietary guide</a> to learn more before you cook.</p>
+
+            <h2>Where the recipes come from</h2>
+            <p>Recipe data comes from the
+                <a href="https://spoonacular.com/food-api" target="_blank" rel="noopener noreferrer" aria-label="Spoonacular API (opens in a new tab)">Spoonacular API</a>.
+                Choosing View recipe on a card opens the full recipe on their website in a new tab.</p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Grill Seeker. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript, linked at the bottom of the body -->
+    <script src="assets/js/menu.js"></script>
+
+</body>
+</html>
