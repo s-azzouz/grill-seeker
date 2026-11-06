@@ -524,6 +524,11 @@ button {
     .cuisine-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Diet cards in two columns */
+    .diet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 /* ==========================================================================
    Desktop layout (1024px and up)
@@ -538,6 +543,11 @@ button {
     /* Cuisine cards in four columns */
     .cuisine-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Diet cards in three columns */
+    .diet-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
