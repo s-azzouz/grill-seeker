@@ -446,6 +446,38 @@ button {
     gap: var(--space-medium);
 }
 
+
+/* ---------- Diet cards (created by JavaScript) ---------- */
+.diet-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
+    padding: var(--space-medium);
+    background-color: var(--colour-background);
+    border: 1px solid var(--colour-border);
+    border-radius: var(--radius);
+}
+
+.diet-card h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.diet-card h3 {
+    margin: var(--space-small) 0 0;
+    font-size: 1rem;
+}
+
+.diet-card p {
+    margin: 0;
+    color: var(--colour-text-light);
+}
+
+.diet-card ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
 /* ==========================================================================
    Tablet layout (768px and up)
    ========================================================================== */
