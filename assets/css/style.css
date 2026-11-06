@@ -478,6 +478,23 @@ button {
     padding-left: 1.25rem;
 }
 
+
+/* Reminder that the guide is general information only */
+.notice {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-medium);
+}
+
+.notice p {
+    margin: 0;
+    padding: var(--space-medium);
+    color: var(--colour-text-light);
+    background-color: var(--colour-surface);
+    border: 1px solid var(--colour-border);
+    border-radius: var(--radius);
+}
+
 /* ==========================================================================
    Tablet layout (768px and up)
    ========================================================================== */
