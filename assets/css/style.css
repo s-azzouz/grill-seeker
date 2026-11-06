@@ -432,6 +432,20 @@ button {
     background-color: var(--colour-accent-dark);
 }
 
+
+/* ---------- Dietary guide page ---------- */
+.diets {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-medium);
+}
+
+/* One column on small screens; more columns are added in media queries */
+.diet-grid {
+    display: grid;
+    gap: var(--space-medium);
+}
+
 /* ==========================================================================
    Tablet layout (768px and up)
    ========================================================================== */
