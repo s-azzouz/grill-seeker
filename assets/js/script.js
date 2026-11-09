@@ -103,11 +103,19 @@ async function fetchRecipes(ingredientNames, cuisine, category) {
     return data.results;
 }
 
-// Asks the API for one random recipe
-async function fetchRandomRecipe() {
-    const url = API_BASE_URL + "/recipes/random"
+// Asks the API for one random recipe, optionally matching a cuisine and category
+async function fetchRandomRecipe(cuisine, category) {
+    let url = API_BASE_URL + "/recipes/random"
         + "?number=1"
         + "&apiKey=" + API_KEY;
+
+    // Combine the chosen filters into one comma-separated list of tags
+    const tags = [cuisine, category].filter(Boolean).map(encodeURIComponent).join(",");
+
+    // Only add the tags if the user chose at least one filter
+    if (tags) {
+        url += "&tags=" + tags;
+    }
 
     const response = await fetch(url);
 
