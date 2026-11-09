@@ -22,6 +22,12 @@ function renderCuisines() {
         const card = document.createElement("article");
         card.classList.add("cuisine-card");
 
+        // Photo for this cuisine, named after its value (for example italian.jpg)
+        const image = document.createElement("img");
+        image.src = "assets/images/cuisines/" + cuisine.value + ".jpg";
+        image.alt = cuisine.imageAlt;
+        image.loading = "lazy";
+
         const body = document.createElement("div");
         body.classList.add("cuisine-card-body");
 
@@ -43,6 +49,7 @@ function renderCuisines() {
             openCuisineDialog(cuisine);
         });
         body.appendChild(learnMoreButton);
+        card.appendChild(image);
         card.appendChild(body);
         cuisineGrid.appendChild(card);
     });
