@@ -535,6 +535,19 @@ button {
 /* Subtle card interaction on mouse/trackpad devices */
 @media (hover: hover) and (pointer: fine) {
     .recipe-card,
+    .cuisine-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .recipe-card:hover,
+    .cuisine-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 22px rgba(38, 51, 46, 0.12);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .recipe-card,
     .cuisine-card,
     .diet-card {
         transition: transform 0.2s ease, box-shadow 0.2s ease;
