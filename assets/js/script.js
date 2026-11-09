@@ -288,7 +288,14 @@ surpriseButton.addEventListener("click", async function () {
     resultsStatus.textContent = "Finding a surprise recipe…";
 
     try {
-        const recipes = await fetchRandomRecipe();
+        const recipes = await fetchRandomRecipe(cuisineFilter.value, categoryFilter.value);
+
+        // No recipe matches the chosen filters: say so
+        if (recipes.length === 0) {
+            resultsGrid.innerHTML = "";
+            resultsStatus.textContent = "No surprise recipe matches those filters, try different ones.";
+            return;
+        }
         renderRecipes(recipes);
 
         // Clear the message once the card is showing
