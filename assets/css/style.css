@@ -65,6 +65,7 @@ h3 {
     color: var(--colour-text);
     font-family: var(--font-heading);
     line-height: 1.2;
+    font-weight: 400;
 }
 
 /* Clear keyboard focus outline for accessibility */
