@@ -289,6 +289,7 @@ surpriseButton.addEventListener("click", async function () {
             resultsStatus.textContent = "No surprise recipe matches those filters, try different ones.";
             return;
         }
+        
         renderRecipes(recipes);
 
         // Clear the message once the card is showing
@@ -300,7 +301,6 @@ surpriseButton.addEventListener("click", async function () {
         console.error("Random recipe failed:", error);
     }
 });
-
 
 // ---------- Cuisine chosen on the Cuisines page ----------
 
@@ -319,7 +319,7 @@ function applyCuisineFromAddress() {
         return option.value === chosenCuisine;
     });
 
-        if (matchingOption) {
+    if (matchingOption) {
         cuisineFilter.value = chosenCuisine;
 
         // Tell the user why a cuisine is already chosen and what to do next
