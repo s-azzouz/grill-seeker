@@ -205,19 +205,18 @@ button {
     cursor: pointer;
     border: 1px solid var(--colour-accent);
     border-radius: var(--radius);
-    background-color: var(--colour-background);
-    color: var(--colour-accent);
+    background-color: var(--colour-accent);
+    color: var(--colour-surface);
+}
+
+button:hover {
+    background-color: var(--colour-accent-dark);
+    border-color: var(--colour-accent-dark);
 }
 
 #find-recipes {
     width: 100%;
     margin-top: var(--space-medium);
-    background-color: var(--colour-accent);
-    color: var(--colour-surface);
-}
-
-#find-recipes:hover {
-    background-color: var(--colour-accent-dark);
 }
 
 /* ---------- Messages ---------- */
@@ -451,6 +450,11 @@ button {
     color: var(--colour-text);
     background: none;
     border: none;
+
+.dialog-close:hover {
+    background: none;
+    color: var(--colour-accent);
+}
 }
 
 /* "See recipes" link styled like a button */
