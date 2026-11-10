@@ -240,6 +240,7 @@ ingredientForm.addEventListener("submit", function (event) {
 // ---------- Searching for recipes ----------
 
 // Runs when the user clicks Find recipes
+// Uses jQuery (https://jquery.com) for the click handler and for updating the results area
 $("#find-recipes").on("click", async function () {
     // Need at least one ingredient to search with
     if (ingredients.length === 0) {
