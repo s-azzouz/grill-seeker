@@ -170,7 +170,7 @@ textarea:focus-visible {
 
 .search form {
     padding: var(--space-medium);
-    background-color: var(--colour-surface);
+    background-color: var(--colour-surface-alt);
     border: 1px solid var(--colour-border);
     border-radius: var(--radius);
 }
@@ -194,7 +194,7 @@ select {
     font-family: inherit;
     border: 1px solid var(--colour-text-light);
     border-radius: var(--radius);
-    background-color: var(--colour-background);
+    background-color: var(--colour-surface-alt);
 }
 
 /* ---------- Buttons ---------- */
@@ -450,12 +450,12 @@ button:hover {
     color: var(--colour-text);
     background: none;
     border: none;
-
+}
 .dialog-close:hover {
     background: none;
     color: var(--colour-accent);
 }
-}
+
 
 /* "See recipes" link styled like a button */
 .dialog-link,
