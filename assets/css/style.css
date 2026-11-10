@@ -194,7 +194,7 @@ select {
     font-family: inherit;
     border: 1px solid var(--colour-text-light);
     border-radius: var(--radius);
-    background-color: var(--colour-surface-alt);
+    background-color: var(--colour-surface);
 }
 
 /* ---------- Buttons ---------- */
