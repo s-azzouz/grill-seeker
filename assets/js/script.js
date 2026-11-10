@@ -241,12 +241,15 @@ ingredientForm.addEventListener("submit", function (event) {
 
 // Runs when the user clicks Find recipes
 $("#find-recipes").on("click", async function () {
+    // Need at least one ingredient to search with
     if (ingredients.length === 0) {
         showError("Add at least one ingredient first.");
         return;
     }
 
     clearError();
+
+    // Tell the user something is happening
     $("#results-status").text("Finding recipes…");
 
     try {
@@ -256,6 +259,7 @@ $("#find-recipes").on("click", async function () {
             categoryFilter.value
         );
 
+        // No matches: clear the old cards and say so
         if (recipes.length === 0) {
             $("#results-grid").empty();
             $("#results-status").text("No recipes found, try different ingredients.");
@@ -263,8 +267,11 @@ $("#find-recipes").on("click", async function () {
         }
 
         renderRecipes(recipes);
+
+        // Clear the message once the cards are showing
         $("#results-status").text("");
     } catch (error) {
+        // Remove any old cards and tell the user what went wrong
         $("#results-grid").empty();
         $("#results-status").text("Something went wrong, please try again.");
         console.error("Recipe search failed:", error);
@@ -289,7 +296,7 @@ surpriseButton.addEventListener("click", async function () {
             resultsStatus.textContent = "No surprise recipe matches those filters, try different ones.";
             return;
         }
-        
+
         renderRecipes(recipes);
 
         // Clear the message once the card is showing
