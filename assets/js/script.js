@@ -240,17 +240,14 @@ ingredientForm.addEventListener("submit", function (event) {
 // ---------- Searching for recipes ----------
 
 // Runs when the user clicks Find recipes
-findRecipesButton.addEventListener("click", async function () {
-    // Need at least one ingredient to search with
+$("#find-recipes").on("click", async function () {
     if (ingredients.length === 0) {
         showError("Add at least one ingredient first.");
         return;
     }
 
     clearError();
-
-    // Tell the user something is happening
-    resultsStatus.textContent = "Finding recipes…";
+    $("#results-status").text("Finding recipes…");
 
     try {
         const recipes = await fetchRecipes(
@@ -259,21 +256,17 @@ findRecipesButton.addEventListener("click", async function () {
             categoryFilter.value
         );
 
-        // No matches: clear the old cards and say so
         if (recipes.length === 0) {
-            resultsGrid.innerHTML = "";
-            resultsStatus.textContent = "No recipes found, try different ingredients.";
+            $("#results-grid").empty();
+            $("#results-status").text("No recipes found, try different ingredients.");
             return;
         }
 
         renderRecipes(recipes);
-
-        // Clear the message once the cards are showing
-        resultsStatus.textContent = "";
+        $("#results-status").text("");
     } catch (error) {
-        // Remove any old cards and tell the user what went wrong
-        resultsGrid.innerHTML = "";
-        resultsStatus.textContent = "Something went wrong, please try again.";
+        $("#results-grid").empty();
+        $("#results-status").text("Something went wrong, please try again.");
         console.error("Recipe search failed:", error);
     }
 });
