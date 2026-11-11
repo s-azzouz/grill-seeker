@@ -1,6 +1,6 @@
 # Grill Seeker
 
-*One-sentence description of the site.* TODO
+Grill seeker is a site created for the general public, for parents, people living on their own, or anyone who cooks for themselves or other other people. It provides a solution to those who want inspiration regarding what to cook, and can find recipes based on the ingredients they have available.
 
 **Live site:** https://s-azzouz.github.io/grill-seeker/
 **Repository:** https://github.com/s-azzouz/grill-seeker
@@ -21,13 +21,17 @@
 
 ## Purpose and value
 
-*What the site does, the problem it solves, and why it matters.* TODO
+With the ever-constant busy lives that we all live, between work, childcare, socialising and our hobbies, we are expected to decide what to eat every day, and while it may not seem like much of a chore, it can really weigh us down, and it’s just one extra thing to think about. Grill Seeker aims to solve this problem by giving you instant recipe ideas based on the ingredients you have and the style of dish you want to make. A pantry-based search was chosen to allow users to have the option to use recipes with ingredients they already have, rather than random results that force them to go shopping and purchase items they may never use again. This means that it won’t be a full shop every day for new ingredients, and it minimises wastage.
 
 **Value to users**
-- TODO
+- Saves time thinking about recipe ideas
+- Minimises wastage and saves money by using ingredients already owned
+- Provides recipe inspiration
 
 **Value to the site owner**
-- TODO
+- Provides a repeat audience, users returning daily or multiple times a week for recipes
+- Can build a paid tier which allows a more tailored experience or a wider selection of recipes
+- Good to build an audience and users to funnel meal plans or further business ventures
 
 ## Target audience and user stories
 
