@@ -37,11 +37,11 @@ With the ever-constant busy lives that we all live, between work, childcare, soc
 
 *Who the site is for.* TODO
 
-| # | As a... | I want to... | So that... | Where it is met |
-|---|---------|--------------|------------|-----------------|
-| 1 | TODO | TODO | TODO | TODO |
-| 2 | TODO | TODO | TODO | TODO |
-| 3 | TODO | TODO | TODO | TODO |
+This site is perfect for those who struggle with recipe ideas. Of course, this is a wide range of people, from athletes, who are constantly searching for recipes, to parents who want some ideas on what to cook for their children, and anyone who simply wants more inspiration in the kitchen or can't decide what to cook. Across the board, many people struggle with coming up with what to eat, and Grill Seeker aims to solve that problem.
+
+As a parent, I want to have access to a variety of recipes that take away the mental load of deciding what to cook every day. This is so that I can pick something in a matter of seconds and know what to make. (met using the Filters, recipe cards and Cuisines page).
+As an athlete who does a healthy weekly shop, I want to get ideas on what those ingredients I buy can create so that I can meet my nutritional goals. (Met using Ingredient search and Dietary Guide).
+As someone who works long hours, I want to have a service that can make the decision for me on what to cook so that I can have a bit more time to relax after work. (met using Surprise me).
 
 ## Features
 
