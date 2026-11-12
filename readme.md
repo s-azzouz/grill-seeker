@@ -54,8 +54,14 @@ As someone who works long hours, I want to have a service that can make the deci
   - Number and symbols in the entry returns a rejection, requesting valid ingredient names.
   - Repeated ingredient entries returns a message to the user that the ingredient is already on the list.
   - The error/rejection messages appear next to entry box, clearly informing the user on what is wrong and what they need to change.
-- **Filters (cuisine and category):** TODO
-- **Surprise me:** TODO
+- **Filters (cuisine and category):** 
+  - Users can narrow down search results by filtering cuisine, dish category, or both at the same time, by using the filter options.
+  -Filters can be added alongside the ingredients entered, returning recipe cards that fit the pantry inputs and the style of dish according to the user.
+  - Changing the filter updates the results instantly, allowing the user to explore various styles of dish. This meets the claim of "choose the style of dish you want to make" from the purpose section.
+- **Surprise me:** 
+  - Users who dont want to add ingredients can press the "Surprise me" button, for the site to choose a random recipe.
+  - The button still can pull from the cuisine and category filters, so the user can still tailor the recipe to their desire.
+  - This removes another element of the decision making, which suits those who dont want to input ingredients, such as the user who works long hours and just wants the decision to be made for them.
 - **Recipe cards and links:** TODO
 - **Cuisines page and detail view:** TODO
 - **Dietary Guide:** TODO
