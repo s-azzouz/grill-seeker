@@ -46,8 +46,14 @@ As someone who works long hours, I want to have a service that can make the deci
 ## Features
 
 ### Existing features
-- **Ingredient search:** TODO
-- **Input validation:** TODO
+- **Ingredient search:**
+ This feature allows users to input the ingredients they are in possession of, or want to use. When they run the search, the site will provide a variety of recipe cards that match the inputted ingredients. This ties back to the purpose of utilising chosen ingredients, in order to save time, money and mental load.
+-**Input validation:**
+  - Every ingredient inputted to the ingredient box is verified before adding and the search.
+  - An empty entry is rejected, and returns a message to the user requesting an         ingredient input.
+  - Number and symbols in the entry returns a rejection, requesting valid ingredient names.
+  - Repeated ingredient entries returns a message to the user that the ingredient is already on the list.
+  - The error/rejection messages appear next to entry box, clearly informing the user on what is wrong and what they need to change.
 - **Filters (cuisine and category):** TODO
 - **Surprise me:** TODO
 - **Recipe cards and links:** TODO
