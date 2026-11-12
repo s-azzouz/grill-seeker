@@ -62,7 +62,12 @@ As someone who works long hours, I want to have a service that can make the deci
   - Users who dont want to add ingredients can press the "Surprise me" button, for the site to choose a random recipe.
   - The button still can pull from the cuisine and category filters, so the user can still tailor the recipe to their desire.
   - This removes another element of the decision making, which suits those who dont want to input ingredients, such as the user who works long hours and just wants the decision to be made for them.
-- **Recipe cards and links:** TODO
+
+- **Recipe cards and links:** 
+  - Every recipe is displayed as a card, allowing the user to scan their options.
+  - Cards display recipe image and the title, as well as how many ingredients the user owns if they have inputted ingredients.
+  - Each recipe has a "view recipe" button which links the user to the full recipe, where they have access to ingredients needed and cooking method.
+  - The "view recipe" link opens in a new tab, so the user can keep their progress on the site and return to it after.
 - **Cuisines page and detail view:** TODO
 - **Dietary Guide:** TODO
 - **About page:** TODO
