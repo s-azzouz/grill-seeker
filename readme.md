@@ -68,8 +68,16 @@ As someone who works long hours, I want to have a service that can make the deci
   - Cards display recipe image and the title, as well as how many ingredients the user owns if they have inputted ingredients.
   - Each recipe has a "view recipe" button which links the user to the full recipe, where they have access to ingredients needed and cooking method.
   - The "view recipe" link opens in a new tab, so the user can keep their progress on the site and return to it after.
-- **Cuisines page and detail view:** TODO
-- **Dietary Guide:** TODO
+- **Cuisines page and detail view:** The Cuisines page allows users to browse by cuisine instead of searching by ingredient.
+  - Each cuisine displays as a card with a photo, the cuisine name, a short description of the cuisine, and a Learn more button.
+  - Selecting "Learn more" opens an in-depth view on top of the page, with more information on the cuisine and suggested recipes.
+  - A "See recipes" button in the detailed view redirects the user to available recipes that match that cuisine.
+  - The detail view contains a close button, which returns the user to the cuisine cards without leaving the page.
+
+- **Dietary Guide:** The Dietary Guide is a page which provides information on common diets, in order to educate the user on what each one consists of before choosing recipes.
+  - Each diet shows up as a card. The page shows Vegetarian, Vegan, Pescatarian, Gluten-free and Low-card.
+  - Every card includes a short piece of information, including what the diet includes and what it avoids.
+  - This guide is for educational purposes only. It does not filter recipe results and bears no functionality aside from the text.
 - **About page:** TODO
 - **404 page and redirect:** TODO
 - **Responsive navigation and mobile menu:** TODO
