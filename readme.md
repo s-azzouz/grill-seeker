@@ -92,28 +92,45 @@ As someone who works long hours, I want to have a service that can make the deci
   - The current page is in bold and underlined on the list of navigation links, which indicates to the user the page that they are currently on.
   - If the user presses menu again when the list is open, it will remove the list, similar to a dropdown menu.
   - This navigation is different on the desktop version, where the links are always visible.
+
 ### Possible future features
-- TODO
+- **Diet filtering:** This would be a feature that would allow users to select a diet from the Dietary Guide page, and add it as a filter to their recipe search, to get a more tailored list of results.
+- **Nutrition information:** Showing nutritional information and details on the recipe cards, for example protein or calories, would be a useful feature to allow users to see how the meals affect their dietary goals.
+- **Saved recipes:** This would require an account system, but allowing users to save their favourite recipes would prove helpful to allow users to return to the site and build a personalised list of favourites.
 
 ## UX design
 
 ### Design process
-*How the design was planned, and the reasoning behind it.* TODO
+[How you planned the design, e.g. which tool you used for wireframes, what you decided first (layout, colours, navigation), and why.]
 
 ### Wireframes
-*Wireframes created before building, one per screen size. Add each image with a short note on how it was followed or changed.* TODO
+Wireframes were created before building, one per screen size. Each is shown below with a note on how it was followed or changed.
 
 | Page | Desktop | Tablet | Mobile |
 |------|---------|--------|--------|
-| Home | TODO | TODO | TODO |
-| Cuisines | TODO | TODO | TODO |
+| Home | ![Home desktop wireframe](assets/images/wireframe-home-desktop.png) | ![Home tablet wireframe](assets/images/wireframe-home-tablet.png) | ![Home mobile wireframe](assets/images/wireframe-home-mobile.png) |
+| Cuisines | ![Cuisines desktop wireframe](assets/images/wireframe-cuisines-desktop.png) | ![Cuisines tablet wireframe](assets/images/wireframe-cuisines-tablet.png) | ![Cuisines mobile wireframe](assets/images/wireframe-cuisines-mobile.png) |
+
+**How the wireframes were followed:** [What matched the final site, and what changed and why.]
 
 ### Design decisions
-- **Colour palette:** TODO
-- **Typography:** TODO
-- **Layout and information hierarchy:** TODO
-- **Navigation:** TODO
-- **Feedback to the user (loading, errors, confirmation):** TODO
+- **Colour palette:** A warm cream background colour, with dark green text and logo. I went for a teracotta color on the buttons and accent in the logo. The panel is pale sage, to highlight the ingredients search box. I decided to choose warm colours as I want this to feel like a cosy, friendly site that induces a comfortable feeling for users. Comfort plays a big role in food and hence why I designed it this way.
+- **Typography:** I used serif typeface for the headings, and a clean sans-serif for the body text and the buttons. DM serif for the headings and Inter for the body text and buttons. These fonts are easy to read, and don't look too "professional", giving off more of a friendly look.
+- **Layout and information hierarchy:** Each page opens with a large heading and a short line after with more detail, providing the user with the purpose of the page straight away. Content is always placed in cards and grouped sections, in order of priority. For example, the ingredient search is placed first on the homepage. The cuisine page and dietary cards also utilise the same structure, to ensure that the information is easy to scan and find.
+- **Navigation:** The logo has been centred in the header, with the same links available on every page. On mobile devices, the links are hidden behind a menu button, and the current page is highlighted through bold and underlined text. This allows users to note where they are on the website.
+- **Feedback to the user (loading, errors, confirmation):** When an ingredient is rejected, this relates to the text content. The search rejects special characters and numbers, and will return an error message such as "Please use letters only, for example: spinach." [What the user sees when an ingredient is rejected, while results load, when nothing matches, and when the API fails. Describe only what your site really does.]
+### Accessibility
+- **Semantic structure:** Each page has one main heading followed by section headings, so the structure is clear to screen readers. [Confirm you use semantic elements such as header, nav, main and footer.]
+- **Image alternative text:** The logo has descriptive alt text, "Grill Seeker - go to homepage", which also explains where the link goes. [Add that the cuisine images and recipe card images have alt text, if they do.]
+- **Form labels:** The ingredient box and the category and cuisine dropdowns have visible labels, so users know what to enter or choose.
+- **Navigation:** The current page is marked in bold and underlined, so users do not rely on colour alone to know where they are. [Add that the Menu button can be used with the keyboard, and any aria attributes such as aria-expanded.]
+- **Colour contrast:** [State the result of a contrast check, e.g. "Text and button colours were checked with a contrast checker and meet WCAG AA."]
+- **Readable text and responsive layout:** Text is large and legible, and the layout adapts to phone, tablet and desktop screens. [Add that the page can be zoomed without breaking.]
+- **Keyboard use:** [Describe what works with Tab, Enter and Escape, for example adding an ingredient with Enter or closing the cuisine detail view with Escape.]
+
+### Deliberate departures from design guidelines
+- [Any choice you made that goes against common UX advice, and why it suits the target user.]
+
 
 ### Accessibility
 - TODO
