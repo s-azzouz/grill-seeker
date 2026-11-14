@@ -48,16 +48,19 @@ As someone who works long hours, I want to have a service that can make the deci
 ### Existing features
 - **Ingredient search:**
  This feature allows users to input the ingredients they are in possession of, or want to use. When they run the search, the site will provide a variety of recipe cards that match the inputted ingredients. This ties back to the purpose of utilising chosen ingredients, in order to save time, money and mental load.
+
 -**Input validation:**
   - Every ingredient inputted to the ingredient box is verified before adding and the search.
   - An empty entry is rejected, and returns a message to the user requesting an         ingredient input.
   - Number and symbols in the entry returns a rejection, requesting valid ingredient names.
   - Repeated ingredient entries returns a message to the user that the ingredient is already on the list.
   - The error/rejection messages appear next to entry box, clearly informing the user on what is wrong and what they need to change.
+
 - **Filters (cuisine and category):** 
   - Users can narrow down search results by filtering cuisine, dish category, or both at the same time, by using the filter options.
   -Filters can be added alongside the ingredients entered, returning recipe cards that fit the pantry inputs and the style of dish according to the user.
   - Changing the filter updates the results instantly, allowing the user to explore various styles of dish. This meets the claim of "choose the style of dish you want to make" from the purpose section.
+
 - **Surprise me:** 
   - Users who dont want to add ingredients can press the "Surprise me" button, for the site to choose a random recipe.
   - The button still can pull from the cuisine and category filters, so the user can still tailor the recipe to their desire.
@@ -68,6 +71,7 @@ As someone who works long hours, I want to have a service that can make the deci
   - Cards display recipe image and the title, as well as how many ingredients the user owns if they have inputted ingredients.
   - Each recipe has a "view recipe" button which links the user to the full recipe, where they have access to ingredients needed and cooking method.
   - The "view recipe" link opens in a new tab, so the user can keep their progress on the site and return to it after.
+
 - **Cuisines page and detail view:** The Cuisines page allows users to browse by cuisine instead of searching by ingredient.
   - Each cuisine displays as a card with a photo, the cuisine name, a short description of the cuisine, and a Learn more button.
   - Selecting "Learn more" opens an in-depth view on top of the page, with more information on the cuisine and suggested recipes.
@@ -79,9 +83,15 @@ As someone who works long hours, I want to have a service that can make the deci
   - Every card includes a short piece of information, including what the diet includes and what it avoids.
   - This guide is for educational purposes only. It does not filter recipe results and bears no functionality aside from the text.
 - **About page:** TODO
-- **404 page and redirect:** TODO
-- **Responsive navigation and mobile menu:** TODO
-
+- **404 page and redirect:** If a user tries to visit a page that doesn't exist, a custom 404 page is diplayed, rather than a browser error.
+  - The page contains the Grill Seeker logo, a message saying "Sorry, no food here!" and directs the user back to the homepage. This means the user does not need to use the back button on the browser.
+  - The page maintains the same styling and fonts as the rest of the site, to keep the design consistent across the board.
+- **Responsive navigation and mobile menu:** The navigation has been designed to adapt to the screen size, so that the full page is accessible on mobile devices as well as larger screens.
+  - On devices with smaller screens, the navigation links are hidden behind the Menu button, placed at the top left of the header, and the logo is centred next to it.
+  - When the "menu" button is pressed, a row links appears, which directs to Home, Cuisines, Dietary Guide and About.
+  - The current page is in bold and underlined on the list of navigation links, which indicates to the user the page that they are currently on.
+  - If the user presses menu again when the list is open, it will remove the list, similar to a dropdown menu.
+  - This navigation is different on the desktop version, where the links are always visible.
 ### Possible future features
 - TODO
 
