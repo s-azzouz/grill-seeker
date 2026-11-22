@@ -140,7 +140,7 @@ Wireframes were created before building, one per screen size. Each is shown belo
 - **Readable text and responsive layout:** Text is a suitable size and legible, and the layout also adapts to phone, tablet and desktop screens. Zooming in on the page also does not break the site.
 
 ### Deliberate departures from design guidelines
-- [Any choice you made that goes against common UX advice, and why it suits the target user.]
+- No deliberate departures from design guidelines were made.
 
 
 ## Technologies used
@@ -181,9 +181,15 @@ Wireframes were created before building, one per screen size. Each is shown belo
 *Any known problem that remains, and why.* TODO
 
 ### Deployed version check
-*How the live site was compared with the development version.* TODO
+The site is hosted on GitHub Pages from the main branch of the repository. The method was as follows
 
-## Deployment
+1. Logged in to GitHub and open the repository: https://github.com/s-azzouz/grill-seeker
+2. Selected the **Settings** tab.
+3. In the left-hand menu, selected **Pages**.
+4. Under **Build and deployment**, set the source to **Deploy from a branch**.
+5. Chose the **main** branch and the **/ (root)** folder, then selected **Save**.
+6. Wait a few minutes, then refresh the Pages settings. The live link appeared at the top: https://s-azzouz.github.io/grill-seeker/
+7. The GitHub link updates with each updated commit, so every push to the main branch updated the live site automatically.
 
 ### Deploying to GitHub Pages
 The site is hosted on GitHub Pages from the main branch of the repository.
