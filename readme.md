@@ -129,13 +129,15 @@ Wireframes were created before building, one per screen size. Each is shown belo
 - **Feedback to the user (loading, errors, confirmation):** When an ingredient is rejected, this relates to the text content. The search rejects special characters and numbers, and will return an error message such as "Please use letters only, for example: spinach.". After inputting valid ingredients, the page displays "Finding recipes" while the recipes load.
 
 ### Accessibility
-- **Semantic structure:** Each page has one main heading followed by section headings, so the structure is clear to screen readers. [Confirm you use semantic elements such as header, nav, main and footer.]
-- **Image alternative text:** The logo has descriptive alt text, "Grill Seeker - go to homepage", which also explains where the link goes. [Add that the cuisine images and recipe card images have alt text, if they do.]
-- **Form labels:** The ingredient box and the category and cuisine dropdowns have visible labels, so users know what to enter or choose.
-- **Navigation:** The current page is marked in bold and underlined, so users do not rely on colour alone to know where they are. [Add that the Menu button can be used with the keyboard, and any aria attributes such as aria-expanded.]
-- **Colour contrast:** [State the result of a contrast check, e.g. "Text and button colours were checked with a contrast checker and meet WCAG AA."]
-- **Readable text and responsive layout:** Text is large and legible, and the layout adapts to phone, tablet and desktop screens. [Add that the page can be zoomed without breaking.]
-- **Keyboard use:** [Describe what works with Tab, Enter and Escape, for example adding an ingredient with Enter or closing the cuisine detail view with Escape.]
+- **Semantic structure:** Pages utilise semantic HTML elements (header, nav, main, section and footer), and every page has a main heading followed by the section headings, making the structure clear to screen readers.
+- **Language:** The site is in English, as declared in the HTML. 
+- **Image alternative text:** The logo and cuisine images have descriptive alt text, and the logo's descriptive text explains where the link goes. The recipe cards pull their images from the Spoonacular API, so its not possible to include descriptive texts for those options.
+- **Form labels:** The ingredient box and dropdown menus from the category and cuisine boxes have labels, so the user understands what the sections are for.
+- **Navigation:** The navigation is labelled as the main navigation, and the users current page is marked with bold and underlined text, so users can understand where they are in the site.
+- **Mobile menu:** The Menu button is a real functional button, which can be used with the keyboard. It uses aria-expanded and aria-controls to tell assistive technology whether the menu is open and which element it controls.
+- **External links:** All the links to other sites open in a new tab, and their labels note this (for example, "Spoonacular API (opens in a new tab)"), so users know what to expect.
+- **Colour contrast:** [State the result of a contrast check, e.g. "Text and button colours were checked with a contrast checker and meet WCAG AA." Only write this once you've checked.]
+- **Readable text and responsive layout:** Text is a suitable size and legible, and the layout also adapts to phone, tablet and desktop screens. Zooming in on the page also does not break the site.
 
 ### Deliberate departures from design guidelines
 - [Any choice you made that goes against common UX advice, and why it suits the target user.]
