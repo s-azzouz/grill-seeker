@@ -83,7 +83,13 @@ As someone who works long hours, I want to have a service that can make the deci
   - Every card includes a short piece of information, including what the diet includes and what it avoids.
   - This guide is for educational purposes only. It does not filter recipe results and bears no functionality aside from the text.
 
-- **About page:** TODO
+- **About page:** The About page provides the user with the purpose of Grill Seeker, so they can understand the site without any other research.
+  - The page opens with a heading and a short tagline: "Helping you decide what to cook with what you already have."
+  - A "Why it exists" section describes the problem the site solves.
+  - A "Who it is for" section lists who the site is designed for.
+  - A "How it works" section provides three short steps: add ingredients, optionally pick a cuisine or category, then choose Find recipes or Surprise me. This simplifies the experience for the user.
+  - The page links to the Cuisines page and the Dietary Guide, to encourage users to explore more of the site before they cook.
+  - A "Where the recipes come from" section mentions the Spoonacular API, with a link that opens in a new tab.
 
 - **404 page and redirect:** If a user tries to visit a page that doesn't exist, a custom 404 page is displayed, rather than a browser error.
   - The page contains the Grill Seeker logo, a message saying "Sorry, no food here!" and directs the user back to the homepage. This means the user does not need to use the back button on the browser.
