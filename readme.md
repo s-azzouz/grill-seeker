@@ -118,7 +118,7 @@ Wireframes were created before building, one per screen size. Each is shown belo
 - **Typography:** I used serif typeface for the headings, and a clean sans-serif for the body text and the buttons. DM serif for the headings and Inter for the body text and buttons. These fonts are easy to read, and don't look too "professional", giving off more of a friendly look.
 - **Layout and information hierarchy:** Each page opens with a large heading and a short line after with more detail, providing the user with the purpose of the page straight away. Content is always placed in cards and grouped sections, in order of priority. For example, the ingredient search is placed first on the homepage. The cuisine page and dietary cards also utilise the same structure, to ensure that the information is easy to scan and find.
 - **Navigation:** The logo has been centred in the header, with the same links available on every page. On mobile devices, the links are hidden behind a menu button, and the current page is highlighted through bold and underlined text. This allows users to note where they are on the website.
-- **Feedback to the user (loading, errors, confirmation):** When an ingredient is rejected, this relates to the text content. The search rejects special characters and numbers, and will return an error message such as "Please use letters only, for example: spinach." [What the user sees when an ingredient is rejected, while results load, when nothing matches, and when the API fails. Describe only what your site really does.]
+- **Feedback to the user (loading, errors, confirmation):** When an ingredient is rejected, this relates to the text content. The search rejects special characters and numbers, and will return an error message such as "Please use letters only, for example: spinach.". After inputting valid ingredients, the page displays "Finding recipes" while the recipes load.[What the user sees when an ingredient is rejected, while results load, when nothing matches, and when the API fails. Describe only what your site really does.]
 ### Accessibility
 - **Semantic structure:** Each page has one main heading followed by section headings, so the structure is clear to screen readers. [Confirm you use semantic elements such as header, nav, main and footer.]
 - **Image alternative text:** The logo has descriptive alt text, "Grill Seeker - go to homepage", which also explains where the link goes. [Add that the cuisine images and recipe card images have alt text, if they do.]
@@ -132,19 +132,14 @@ Wireframes were created before building, one per screen size. Each is shown belo
 - [Any choice you made that goes against common UX advice, and why it suits the target user.]
 
 
-### Accessibility
-- TODO
-
-### Deliberate departures from design guidelines
-*List any choice that goes against common UX advice, with the reason.* TODO
-
 ## Technologies used
 
-- HTML5, CSS3 and JavaScript (written by me)
-- External API: TODO
-- Hosting and version control: TODO
-- Design tool: TODO
-- Fonts: TODO
+- HTML5, CSS3 and JavaScript.
+- External API: Spoonacular (complexSearch endpoint), used to search for recipes from the ingredients, cuisine and category that the user desires.
+- Hosting and version control: Git and GitHub for version control, and the live site utilises GitHub pages.
+- Design tool: Figma for the wireframes.
+- Fonts: DM Serif Display for headings and Inter for body text. Loaded from google fonts.
+- Code editor: VS Code.
 
 ## Testing
 
@@ -180,19 +175,44 @@ Wireframes were created before building, one per screen size. Each is shown belo
 ## Deployment
 
 ### Deploying to GitHub Pages
-1. TODO
+The site is hosted on GitHub Pages from the main branch of the repository.
+
+The GitHub link updates with each updated commit.
+
+**Before deploying, the following was checked:**
+- No commented-out code left in the files.
+- All internal links work, including the 404 page.
+- The live site was compared with the development version. Added a link to the Testing section.
 
 ### Running locally
-1. TODO
+1. Tested by opening the repository on GitHub and selecting **Code**, then copying the HTTPS link.
+2. In a terminal, runing `git clone` followed by the copied link.
+3. Opening the project folder in a code editor (Visual Studio Code).
+4. Added Spoonacular API key
+5. Opening `index.html` in a browser, and using an extension (Live Server).
 
 ## Version control and development process
 
-*How Git and GitHub were used, with the stages of development.* TODO
+Git and GitHub were used for version control throughout the development of project. Every feature and fix was committed separately, and features were verified as they were built, in order to address problems as they arose.
+
+**Development stages**
+1. **Setup:** This was the creation of the repository and folder structure, ensuring seperate folders for different uses (CSS,JS,Images etc).
+2. **Core search:** This stage was the creation of the ingredient input, validation and API requests.
+3. **Results and filters:** At this stage recipe cards were added, along with category and cuisine filters, and the Surprise Me button.
+4. **Extra pages:** This was the development of the Cuisines page, detail view, and the Dietary and 404 page.
+5. **Responsive design and accessibility:** Added the mobile menu, and addressed the fixed layout and constrast issues.
+6. **Testing and deployment:** Validating the code, addressing bugs that were discovered, and deployment to GitHub Pages.
+
+**Commit messages**
+Commits are consistent throughout, explaining the change to provide a clear view of how the website was developed and to aid with version control. Main structure of the pages are larger commits, but this is to provide a clear starting point to build on.
+
+The full commit history of the project can be seen in the github link: (https://github.com/s-azzouz/grill-seeker/commits/main).
 
 ## Known issues and limitations
 
-- **API key visible in the front-end code:** TODO
-- **API daily request limit:** TODO
+- **API key visible in the front-end code:** The Spoonacular API key is stored in the JavaScript file, so it is visible to anyone who looks at the page source or repository, allowing them to see and use it as they like. This is because the site has no back end to hide the key in, and the project strictly front-end only. A possible fix would be to send requests through a small server holding the key, however that is outside the scope of this unit. The key is deployed on a free plan, so there is no risk of a charge, rather the possibility of the usage limit being reached, rather than incurring a charge.
+- **API daily request limit:** The API used (Spoonacular) limits the amount of requests per day. Once the limit has been reached, the searches will not return results until the limit resets. In testing the limit was not reached, so the result once this limit has been hit is unclear.
+- **Dietary Guide does not filter results:** The Dietary Guide is useful for providing common diets, but there is no connection to the recipe search, therefore users are not yet able to filter recipes based on diet. This has been mentioned in the possible future features.
 
 ## Credits and attribution
 
@@ -202,16 +222,15 @@ Wireframes were created before building, one per screen size. Each is shown belo
 | TODO | TODO | TODO |
 
 ### Data
-- TODO
+- All Recipe data is pulled from the Spoonacular API: (https://spoonacular.com/food-api).
+- The information on Cuisines and Dietary Guide pages were sourced by ChatGPT, and rewritten by me.
 
 ### Images
-| Image | Photographer | Source and link |
-|-------|--------------|-----------------|
-| TODO | TODO | TODO |
+All cuisine images are obtained from Unsplash.com, and the Logo was designed by myself on Canva.
 
 ### Fonts and other resources
-- TODO
+- [DM Serif Display](https://fonts.google.com/specimen/DM+Serif+Display) and [Inter](https://fonts.google.com/specimen/Inter), this was loaded from Google Fonts.
 
 ## Use of AI assistance
 
-*A short, honest note on how AI tools were used, following the course's guidance.* TODO
+Claude was used as an assistant to keep track of the projects progress, and ChatGPT to help summarise cuisine information, but all code was written by hand.
