@@ -1,6 +1,6 @@
 # Grill Seeker
 
-Grill seeker is a site created for the general public, for parents, people living on their own, or anyone who cooks for themselves or other other people. It provides a solution to those who want inspiration regarding what to cook, and can find recipes based on the ingredients they have available.
+Grill Seeker is a site created for the general public, for parents, people living on their own, or anyone who cooks for themselves or other people. It provides a solution to those who want inspiration regarding what to cook, and can find recipes based on the ingredients they have available.
 
 **Live site:** https://s-azzouz.github.io/grill-seeker/
 **Repository:** https://github.com/s-azzouz/grill-seeker
@@ -35,12 +35,12 @@ With the ever-constant busy lives that we all live, between work, childcare, soc
 
 ## Target audience and user stories
 
-*Who the site is for.* TODO
-
 This site is perfect for those who struggle with recipe ideas. Of course, this is a wide range of people, from athletes, who are constantly searching for recipes, to parents who want some ideas on what to cook for their children, and anyone who simply wants more inspiration in the kitchen or can't decide what to cook. Across the board, many people struggle with coming up with what to eat, and Grill Seeker aims to solve that problem.
 
 As a parent, I want to have access to a variety of recipes that take away the mental load of deciding what to cook every day. This is so that I can pick something in a matter of seconds and know what to make. (met using the Filters, recipe cards and Cuisines page).
+
 As an athlete who does a healthy weekly shop, I want to get ideas on what those ingredients I buy can create so that I can meet my nutritional goals. (Met using Ingredient search and Dietary Guide).
+
 As someone who works long hours, I want to have a service that can make the decision for me on what to cook so that I can have a bit more time to relax after work. (met using Surprise me).
 
 ## Features
@@ -49,20 +49,20 @@ As someone who works long hours, I want to have a service that can make the deci
 - **Ingredient search:**
  This feature allows users to input the ingredients they are in possession of, or want to use. When they run the search, the site will provide a variety of recipe cards that match the inputted ingredients. This ties back to the purpose of utilising chosen ingredients, in order to save time, money and mental load.
 
--**Input validation:**
+- **Input validation:**
   - Every ingredient inputted to the ingredient box is verified before adding and the search.
-  - An empty entry is rejected, and returns a message to the user requesting an         ingredient input.
+  - An empty entry is rejected, and returns a message to the user requesting an ingredient input.
   - Number and symbols in the entry returns a rejection, requesting valid ingredient names.
   - Repeated ingredient entries returns a message to the user that the ingredient is already on the list.
   - The error/rejection messages appear next to entry box, clearly informing the user on what is wrong and what they need to change.
 
 - **Filters (cuisine and category):** 
   - Users can narrow down search results by filtering cuisine, dish category, or both at the same time, by using the filter options.
-  -Filters can be added alongside the ingredients entered, returning recipe cards that fit the pantry inputs and the style of dish according to the user.
+  - Filters can be added alongside the ingredients entered, returning recipe cards that fit the pantry inputs and the style of dish according to the user.
   - Changing the filter updates the results instantly, allowing the user to explore various styles of dish. This meets the claim of "choose the style of dish you want to make" from the purpose section.
 
 - **Surprise me:** 
-  - Users who dont want to add ingredients can press the "Surprise me" button, for the site to choose a random recipe.
+  - Users who don't want to add ingredients can press the "Surprise me" button, for the site to choose a random recipe.
   - The button still can pull from the cuisine and category filters, so the user can still tailor the recipe to their desire.
   - This removes another element of the decision making, which suits those who dont want to input ingredients, such as the user who works long hours and just wants the decision to be made for them.
 
@@ -79,16 +79,18 @@ As someone who works long hours, I want to have a service that can make the deci
   - The detail view contains a close button, which returns the user to the cuisine cards without leaving the page.
 
 - **Dietary Guide:** The Dietary Guide is a page which provides information on common diets, in order to educate the user on what each one consists of before choosing recipes.
-  - Each diet shows up as a card. The page shows Vegetarian, Vegan, Pescatarian, Gluten-free and Low-card.
+  - Each diet shows up as a card. The page shows Vegetarian, Vegan, Pescatarian, Gluten-free and Low-carb.
   - Every card includes a short piece of information, including what the diet includes and what it avoids.
   - This guide is for educational purposes only. It does not filter recipe results and bears no functionality aside from the text.
+
 - **About page:** TODO
-- **404 page and redirect:** If a user tries to visit a page that doesn't exist, a custom 404 page is diplayed, rather than a browser error.
+
+- **404 page and redirect:** If a user tries to visit a page that doesn't exist, a custom 404 page is displayed, rather than a browser error.
   - The page contains the Grill Seeker logo, a message saying "Sorry, no food here!" and directs the user back to the homepage. This means the user does not need to use the back button on the browser.
   - The page maintains the same styling and fonts as the rest of the site, to keep the design consistent across the board.
 - **Responsive navigation and mobile menu:** The navigation has been designed to adapt to the screen size, so that the full page is accessible on mobile devices as well as larger screens.
   - On devices with smaller screens, the navigation links are hidden behind the Menu button, placed at the top left of the header, and the logo is centred next to it.
-  - When the "menu" button is pressed, a row links appears, which directs to Home, Cuisines, Dietary Guide and About.
+  - When the "menu" button is pressed, a row of links appears, which directs to Home, Cuisines, Dietary Guide and About.
   - The current page is in bold and underlined on the list of navigation links, which indicates to the user the page that they are currently on.
   - If the user presses menu again when the list is open, it will remove the list, similar to a dropdown menu.
   - This navigation is different on the desktop version, where the links are always visible.
@@ -114,11 +116,12 @@ Wireframes were created before building, one per screen size. Each is shown belo
 **How the wireframes were followed:** [What matched the final site, and what changed and why.]
 
 ### Design decisions
-- **Colour palette:** A warm cream background colour, with dark green text and logo. I went for a teracotta color on the buttons and accent in the logo. The panel is pale sage, to highlight the ingredients search box. I decided to choose warm colours as I want this to feel like a cosy, friendly site that induces a comfortable feeling for users. Comfort plays a big role in food and hence why I designed it this way.
+- **Colour palette:** A warm cream background colour, with dark green text and logo. I went for a terracotta color on the buttons and accent in the logo. The panel is pale sage, to highlight the ingredients search box. I decided to choose warm colours as I want this to feel like a cosy, friendly site that induces a comfortable feeling for users. Comfort plays a big role in food and hence why I designed it this way.
 - **Typography:** I used serif typeface for the headings, and a clean sans-serif for the body text and the buttons. DM serif for the headings and Inter for the body text and buttons. These fonts are easy to read, and don't look too "professional", giving off more of a friendly look.
 - **Layout and information hierarchy:** Each page opens with a large heading and a short line after with more detail, providing the user with the purpose of the page straight away. Content is always placed in cards and grouped sections, in order of priority. For example, the ingredient search is placed first on the homepage. The cuisine page and dietary cards also utilise the same structure, to ensure that the information is easy to scan and find.
 - **Navigation:** The logo has been centred in the header, with the same links available on every page. On mobile devices, the links are hidden behind a menu button, and the current page is highlighted through bold and underlined text. This allows users to note where they are on the website.
-- **Feedback to the user (loading, errors, confirmation):** When an ingredient is rejected, this relates to the text content. The search rejects special characters and numbers, and will return an error message such as "Please use letters only, for example: spinach.". After inputting valid ingredients, the page displays "Finding recipes" while the recipes load.[What the user sees when an ingredient is rejected, while results load, when nothing matches, and when the API fails. Describe only what your site really does.]
+- **Feedback to the user (loading, errors, confirmation):** When an ingredient is rejected, this relates to the text content. The search rejects special characters and numbers, and will return an error message such as "Please use letters only, for example: spinach.". After inputting valid ingredients, the page displays "Finding recipes" while the recipes load.
+
 ### Accessibility
 - **Semantic structure:** Each page has one main heading followed by section headings, so the structure is clear to screen readers. [Confirm you use semantic elements such as header, nav, main and footer.]
 - **Image alternative text:** The logo has descriptive alt text, "Grill Seeker - go to homepage", which also explains where the link goes. [Add that the cuisine images and recipe card images have alt text, if they do.]
@@ -186,31 +189,31 @@ The GitHub link updates with each updated commit.
 
 ### Running locally
 1. Tested by opening the repository on GitHub and selecting **Code**, then copying the HTTPS link.
-2. In a terminal, runing `git clone` followed by the copied link.
+2. In a terminal, running `git clone` followed by the copied link.
 3. Opening the project folder in a code editor (Visual Studio Code).
 4. Added Spoonacular API key
 5. Opening `index.html` in a browser, and using an extension (Live Server).
 
 ## Version control and development process
 
-Git and GitHub were used for version control throughout the development of project. Every feature and fix was committed separately, and features were verified as they were built, in order to address problems as they arose.
+Git and GitHub were used for version control throughout the development of the project. Every feature and fix was committed separately, and features were verified as they were built, in order to address problems as they arose.
 
 **Development stages**
-1. **Setup:** This was the creation of the repository and folder structure, ensuring seperate folders for different uses (CSS,JS,Images etc).
+1. **Setup:** This was the creation of the repository and folder structure, ensuring separate folders for different uses (CSS,JS,Images etc).
 2. **Core search:** This stage was the creation of the ingredient input, validation and API requests.
 3. **Results and filters:** At this stage recipe cards were added, along with category and cuisine filters, and the Surprise Me button.
 4. **Extra pages:** This was the development of the Cuisines page, detail view, and the Dietary and 404 page.
-5. **Responsive design and accessibility:** Added the mobile menu, and addressed the fixed layout and constrast issues.
+5. **Responsive design and accessibility:** Added the mobile menu, and addressed the fixed layout and contrast issues.
 6. **Testing and deployment:** Validating the code, addressing bugs that were discovered, and deployment to GitHub Pages.
 
 **Commit messages**
-Commits are consistent throughout, explaining the change to provide a clear view of how the website was developed and to aid with version control. Main structure of the pages are larger commits, but this is to provide a clear starting point to build on.
+Commits are consistent throughout, explaining the change to provide a clear view of how the website was developed and to aid with version control. Main structure of the pages is larger commits, but this is to provide a clear starting point to build on.
 
 The full commit history of the project can be seen in the github link: (https://github.com/s-azzouz/grill-seeker/commits/main).
 
 ## Known issues and limitations
 
-- **API key visible in the front-end code:** The Spoonacular API key is stored in the JavaScript file, so it is visible to anyone who looks at the page source or repository, allowing them to see and use it as they like. This is because the site has no back end to hide the key in, and the project strictly front-end only. A possible fix would be to send requests through a small server holding the key, however that is outside the scope of this unit. The key is deployed on a free plan, so there is no risk of a charge, rather the possibility of the usage limit being reached, rather than incurring a charge.
+- **API key visible in the front-end code:** The Spoonacular API key is stored in the JavaScript file, so it is visible to anyone who looks at the page source or repository, allowing them to see and use it as they like. This is because the site has no back end to hide the key in, and the project is strictly front-end only. A possible fix would be to send requests through a small server holding the key, however that is outside the scope of this unit. The key is deployed on a free plan, so there is no risk of a charge, rather the possibility of the usage limit being reached, rather than incurring a charge.
 - **API daily request limit:** The API used (Spoonacular) limits the amount of requests per day. Once the limit has been reached, the searches will not return results until the limit resets. In testing the limit was not reached, so the result once this limit has been hit is unclear.
 - **Dietary Guide does not filter results:** The Dietary Guide is useful for providing common diets, but there is no connection to the recipe search, therefore users are not yet able to filter recipes based on diet. This has been mentioned in the possible future features.
 
